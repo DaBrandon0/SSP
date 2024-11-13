@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../SSP.srcs/sources_1/new/FIFORX.v" \
+"../../../../SSP.srcs/sources_1/new/FIFOTX.v" \
+"../../../../SSP.srcs/sources_1/new/SSP.v" \
+"../../../../SSP.srcs/sources_1/new/SSPCLK.v" \
+"../../../../../../../../Downloads/ssp_test2.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

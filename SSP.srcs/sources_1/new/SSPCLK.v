@@ -26,16 +26,14 @@ module SSPCLK(
     output SSPCLK
     );
     
-    reg [2:0] div2;
+    reg div2 = 0;
     
-    always@(posedge PCLK or posedge CLEAR_B)
+    always@(posedge PCLK)
+    
     begin
-        if(CLEAR_B)
-            div2 = 0;
-        else
-            div2 = div2 + 1;
+            div2 <= !div2;
     end
     
-    assign SPPCLK = (div2 > 2'b01);
+    assign SSPCLK = (div2);
     
 endmodule

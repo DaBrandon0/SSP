@@ -7,15 +7,14 @@ module FIFOTX(
     input fin, //signal from logic that all 8 bits have been transmitted
     output validTx, // valid fifo out
     output SSPTXINTR, // fifofull signal
-    output [7:0] TxData //parallel data
+    output reg [7:0] TxData //parallel data
     );
     
     reg [7:0] fifomem [3:0];
     reg [3:0] fifopoint;
-    
-    always@(posedge PCLK or posedge CLEAR_B)
+    always@(posedge PCLK)
     begin
-        if (CLEAR_B)
+        if (!CLEAR_B)
         begin
             fifomem[0] <= 8'b0000000;
             fifomem[1] <= 8'b0000000;
@@ -25,10 +24,16 @@ module FIFOTX(
         end
         else
         begin
+           TxData <= fifomem[0];
            if (fin)
            begin
                 if (fifopoint != 0)
+                begin
+                    fifomem[0] <= fifomem[1];
+                    fifomem[1] <= fifomem[2];
+                    fifomem[2] <= fifomem[3];
                     fifopoint <= fifopoint - 1;
+                end
            end
            if (PSEL && PWRITE)
            begin
@@ -41,7 +46,6 @@ module FIFOTX(
         end
     end
     assign SSPTXINTR = (fifopoint == 4);
-    assign TxData = fifomem[0];
     assign validTx = (fifopoint > 0);
     
 endmodule

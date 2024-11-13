@@ -1,0 +1,10 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Users/brand/Documents/2024 Fall/VLSI/SSP/SSP.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+C:/Users/brand/Documents/2024 Fall/VLSI/SSP/SSP.srcs/sources_1/new/FIFORX.v,1731530065,verilog,,C:/Users/brand/Documents/2024 Fall/VLSI/SSP/SSP.srcs/sources_1/new/FIFOTX.v,,FIFORX,,,,,,,,
+C:/Users/brand/Documents/2024 Fall/VLSI/SSP/SSP.srcs/sources_1/new/FIFOTX.v,1731530978,verilog,,C:/Users/brand/Documents/2024 Fall/VLSI/SSP/SSP.srcs/sources_1/new/SSP.v,,FIFOTX,,,,,,,,
+C:/Users/brand/Documents/2024 Fall/VLSI/SSP/SSP.srcs/sources_1/new/SSP.v,1731534235,verilog,,C:/Users/brand/Documents/2024 Fall/VLSI/SSP/SSP.srcs/sources_1/new/SSPCLK.v,,SSP,,,,,,,,
+C:/Users/brand/Documents/2024 Fall/VLSI/SSP/SSP.srcs/sources_1/new/SSPCLK.v,1731521459,verilog,,C:/Users/brand/Downloads/ssp_test2.v,,SSPCLK,,,,,,,,
+C:/Users/brand/Downloads/ssp_test2.v,1731528685,verilog,,,,ssp_test,,,,,,,,
